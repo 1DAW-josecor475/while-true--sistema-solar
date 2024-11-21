@@ -5,10 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AAAAAAA</title>
     <style>
+        h1 {
+            text-align: center;
+            margin-left: 50px;
+        }
         .container {
             display: flex;
-            justify-content: center;
-            align-items: center;
+            flex: 1;
+          
         }
         body {
             background: url('https://images.pexels.com/photos/3214110/pexels-photo-3214110.jpeg?cs=srgb&dl=pexels-frank-cone-140140-3214110.jpg&fm=jpg');
@@ -21,9 +25,14 @@
             aspect-ratio: 1 / 1;
             container-type: inline-size;
             display: grid;
-            width: 50%;
+            width: 10%;
             align-items: center;
             justify-content: center;
+            transition: ease 2s;
+        }
+        ol:hover {
+            width: 45%;
+            transform: translateX(60%);
         }
         li {
             aspect-ratio: 1 / 1;
@@ -76,14 +85,14 @@
             }
         }
 
-        .sun {
+        .proxmox {
             --b: url('images/proxmox_se_ha_caido.jpg');
             --d: 30cqi;
             --w: 30cqi;
             border: 0;
             
         }
-        .sun::after {
+        .proxmox::after {
             animation: spin 6s linear infinite;
             background-size: cover;
             background-position: center;
@@ -151,9 +160,10 @@
     </style>
 </head>
 <body>
-    <div class="container">
+    <h1>SIGUE AL PROXMOX (YA ME JODERIA) CON EL RATON, JEJE, NO SABEMOS ARREGLARLO, LO SENTIMOS (JAJA EN VERDAH NO)</h1>
+    <div class="container" id="container1">
         <ol>
-            <li class="sun"></li>
+            <li class="proxmox"></li>
             <li class="pikachu"></li>
             <li class="doraemon"></li>
             <li class="webiwabo"></li>
