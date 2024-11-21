@@ -16,13 +16,13 @@ Este proyecto muestra una simulación simple de un sistema solar con planetas qu
 Aquí tienes una vista previa directa de la representación del sistema solar:
 
 - Ver en [Github Pages](https://1daw-josecor475.github.io/whiletrue-sistema-solar/sistema_solar.html)
-* [Your GitHub Pages URL and adding preview to your README.md](/whiletrue-sistema-solar/sistema_solar.html)
+
 ## Cómo usar
 
 1. Clona el repositorio en tu máquina local.
 2. Abre el archivo `index.html` en tu navegador web para ver la simulación.
 
 ```bash
-git clone https://github.com/tu-usuario/tu-repositorio.git
-cd tu-repositorio
-open index.html
+git clone https://github.com/1DAW-josecor475/whiletrue-sistema-solar.git
+cd whiletrue-sistema-solar
+open sistema_solar.html
