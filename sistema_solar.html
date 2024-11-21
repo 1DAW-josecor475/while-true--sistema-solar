@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AAAAAAA</title>
     <style>
+        h1 {
+            align-items: center;
+        }
         .container {
             display: flex;
             justify-content: center;
@@ -27,7 +30,7 @@
         }
         li {
             aspect-ratio: 1 / 1;
-            border: 1px dashed;
+            border: 2px dashed;
             border-radius: 50%;
             display: grid;
             grid-area: 1 / 1;
@@ -45,6 +48,14 @@
             width: var(--w, 2cqi);
         }
 
+        @keyframes spin-negativo {
+            from {
+                rotate: 0deg;
+            }
+            to {
+                rotate: -360deg;
+            }
+        }
         @keyframes spin {
             from {
                 rotate: 0deg;
@@ -75,6 +86,7 @@
                 offset-distance: 175%;
             }
         }
+
 
         .sun {
             --b: url('images/proxmox_se_ha_caido.jpg');
@@ -159,6 +171,9 @@
             <li class="webiwabo"></li>
             <li class="gustavo"></li>
         </ol>
+    </div>
+    <div>
+        <h1>PÁGINA WEB DEL SISTEMA SOLAR</h1>
     </div>
 </body>
 </html>
