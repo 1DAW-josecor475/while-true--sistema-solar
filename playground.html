@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AAAAAAA</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        body {
+            background: #000F;
+            color: #FFFA;
+            margin: 0;
+            width: 100vw;
+        }
+        ol {
+            all: unset;
+            aspect-ratio: 1 / 1;
+            container-type: inline-size;
+            display: grid;
+            width: 50%;
+            align-items: center;
+            justify-content: center;
+        }
+        li {
+            aspect-ratio: 1 / 1;
+            border: 1px dashed;
+            border-radius: 50%;
+            display: grid;
+            grid-area: 1 / 1;
+            place-self: center;
+            width: var(--d, 2cqi);
+        }
+        li::after {
+            aspect-ratio: 1 / 1;
+            background: var(--b, hsl(0, 0%, 50%));
+            border-radius: 50%;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            content: '';
+            display: block;
+            offset-path: content-box;
+            width: var(--w, 2cqi);
+        }
+        @keyframes rotate {
+            to {
+                offset-distance: 100%;
+            }
+        }
+
+        @keyframes rotate-doraemon {
+            to {
+                offset-distance: 125%;
+            }
+        }
+        
+        @keyframes rotate-webiwabo {
+            to {
+                offset-distance: 150%;
+            }
+        }
+
+        .sun {
+            --b: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a4216035-674a-4a1b-9d22-664bb9acaf3b/d4gqz2q-85159cc1-acdb-4b08-a8cf-ff3a82bef600.jpg/v1/fill/w_900,h_675,q_75,strp/la_rana_gustavo_in_fraganti_by_zalattadrk_d4gqz2q-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9Njc1IiwicGF0aCI6IlwvZlwvYTQyMTYwMzUtNjc0YS00YTFiLTlkMjItNjY0YmI5YWNhZjNiXC9kNGdxejJxLTg1MTU5Y2MxLWFjZGItNGIwOC1hOGNmLWZmM2E4MmJlZjYwMC5qcGciLCJ3aWR0aCI6Ijw9OTAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.4_fUlDR_nyJG_NV_HbLXBSawwY_mI7ADWSDvN8Donn8');
+            --d: 30cqi;
+            --w: 30cqi;
+            border: 0;
+        }
+        .sun::after {
+            background-size: cover;
+            background-position: center;
+            offset-path: none;
+            place-self: center;
+        }
+        .earth {
+            --b: url('https://preview.redd.it/nb6huy98mb591.jpg?auto=webp&s=fd68177ca5cf159ea5c56ac688fd87ffbaba8cc4');
+            --d: 75cqi;
+            --t: 6315.79ms;
+            --w: 10cqi;
+        }
+        .doraemon {
+            --b: url('https://i.pinimg.com/originals/52/1a/ba/521abaccf3c3b5e05956d404498ec39d.jpg');
+            --d: 75cqi;
+            --t: 6315.79ms;
+            --w: 10cqi;
+            --offset-start: 25%;
+        }
+        .webiwabo {
+            --b: url('https://static.wikia.nocookie.net/mamarre-estudios-espanol/images/6/66/Webi_Wabo.jpeg/revision/latest/thumbnail/width/360/height/360?cb=20200928223732&path-prefix=es');
+            --d: 75cqi;
+            --t: 6315.79ms;
+            --w: 10cqi;
+            --offset-start: 50%;
+        }
+        .earth::after {
+            animation: rotate var(--t, 3s) linear infinite;
+            background-size: cover;
+            background-position: center;
+            place-self: center;
+            offset-distance: 0%;
+        }
+        .doraemon::after {
+            animation: rotate-doraemon var(--t, 3s) linear infinite;
+            background-size: cover;
+            background-position: center;
+            place-self: center;
+            offset-distance: 25%;
+        }
+        .webiwabo::after {
+            animation: rotate-webiwabo var(--t, 3s) linear infinite;
+            background-size: cover;
+            background-position: center;
+            place-self: center;
+            offset-distance: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <ol>
+            <li class="sun"></li>
+            <li class="earth"></li>
+            <li class="doraemon"></li>
+            <li class="webiwabo"></li>
+        </ol>
+    </div>
+</body>
+</html>
