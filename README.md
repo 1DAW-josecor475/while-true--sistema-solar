@@ -1,3 +1,20 @@
+# Sistema Solar Meme ☀
+
+Esta es una representación del sistema solar utilizando HTML y CSS. Los planetas están animados para girar alrededor del sol.
+
+## Descripción
+
+Este proyecto muestra una simulación simple de un sistema solar con planetas que orbitan alrededor del sol. Utiliza un fondo de espacio y representaciones gráficas de algunos personajes divertidos como planetas.
+
+## Tecnologías
+
+- HTML
+- CSS
+
+## Demo
+
+Aquí tienes una vista previa directa de la representación del sistema solar:
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -93,7 +110,7 @@
                         0px 0px 66px 0px #FCF596,
                         0px 0px 99px 0px #FBFBFB;
         }
-        .earth {
+        .pikachu {
             --b: url('images/pikachu.webp');
             --d: 75cqi;
             --t: 6315.79ms;
@@ -120,7 +137,7 @@
             --w: 10cqi;
             --offset-start: 75%;
         }
-        .earth::after {
+        .pikachu::after {
             animation: rotate var(--t, 3s) linear infinite;
             background-size: cover;
             background-position: center;
@@ -154,7 +171,7 @@
     <div class="container">
         <ol>
             <li class="sun"></li>
-            <li class="earth"></li>
+            <li class="pikachu"></li>
             <li class="doraemon"></li>
             <li class="webiwabo"></li>
             <li class="gustavo"></li>
@@ -162,3 +179,13 @@
     </div>
 </body>
 </html>
+
+## Cómo usar
+
+1. Clona el repositorio en tu máquina local.
+2. Abre el archivo `index.html` en tu navegador web para ver la simulación.
+
+```bash
+git clone https://github.com/tu-usuario/tu-repositorio.git
+cd tu-repositorio
+open index.html
