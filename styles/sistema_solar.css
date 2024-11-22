@@ -17,7 +17,7 @@ body {
     height: 100%;
 }
 
-ol {
+#sistema-proxmox {
     all: unset;
     position: absolute;
     top: 0;
@@ -30,12 +30,50 @@ ol {
     justify-content: center;
     transition: all 2s ease;
 }
+#sistema-linux {
+    all: unset;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: grid;
+    width: 10%;
+    aspect-ratio: 1 / 1;
+    container-type: inline-size;
+    align-items: center;
+    justify-content: center;
+    transition: all 2s ease;
+}
+#sistema-shinchan {
+    all: unset;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: grid;
+    width: 10%;
+    aspect-ratio: 1 / 1;
+    container-type: inline-size;
+    align-items: center;
+    justify-content: center;
+    transition: all 2s ease;
+}
 
-ol.centrado {
+#sistema-proxmox.centrado {
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    width: 40%;
+    transform: translate(-200%, -90%);
+    width: 20%;
+}
+#sistema-linux.centrado {
+    top: 50%;
+    right: 50%;
+    transform: translate(25%, -90%);
+    width: 20%;
+}
+#sistema-shinchan.centrado {
+    top: 50%;
+    right: 50%;
+    transform: translate(300%, -90%);
+    width: 20%;
 }
 
 li {
@@ -60,13 +98,41 @@ li::after {
 }
 
 /* Estilado de los planetas y el centro */
-.sun {
-    --b: url('../images/proxmox_se_ha_caido.jpg');
+/* Sistema proxmox */
+.proxmox {
+    --b: url('../images/sist_proxmox/proxmox_se_ha_caido.jpg');
     --d: 30cqi;
     --w: 30cqi;
     border: 0;
 }
-.sun::after {
+.pikachu {
+    --b: url('../images/sist_proxmox/pikachu.webp');
+    --d: 75cqi;
+    --t: 6315.79ms;
+    --w: 10cqi;
+}
+.doraemon {
+    --b: url('../images/sist_proxmox/doraemon.jpg');
+    --d: 75cqi;
+    --t: 6315.79ms;
+    --w: 10cqi;
+    --offset-start: 25%;
+}
+.webiwabo {
+    --b: url('../images/sist_proxmox/webiwabo.webp');
+    --d: 75cqi;
+    --t: 6315.79ms;
+    --w: 10cqi;
+    --offset-start: 50%;
+}
+.gustavo {
+    --b: url('../images/sist_proxmox/gustavo.jpg');
+    --d: 75cqi;
+    --t: 6315.79ms;
+    --w: 10cqi;
+    --offset-start: 75%;
+}
+.proxmox::after {
     animation: spin 6s linear infinite;
     background-size: cover;
     background-position: center;
@@ -76,33 +142,6 @@ li::after {
                 0px 0px 66px 0px #FCF596,
                 0px 0px 99px 0px #FBFBFB;
 }
-.pikachu {
-    --b: url('../images/pikachu.webp');
-    --d: 75cqi;
-    --t: 6315.79ms;
-    --w: 10cqi;
-}
-.doraemon {
-    --b: url('../images/doraemon.jpg');
-    --d: 75cqi;
-    --t: 6315.79ms;
-    --w: 10cqi;
-    --offset-start: 25%;
-}
-.webiwabo {
-    --b: url('../images/webiwabo.webp');
-    --d: 75cqi;
-    --t: 6315.79ms;
-    --w: 10cqi;
-    --offset-start: 50%;
-}
-.gustavo {
-    --b: url('../images/gustavo.jpg');
-    --d: 75cqi;
-    --t: 6315.79ms;
-    --w: 10cqi;
-    --offset-start: 75%;
-}
 .pikachu::after {
     animation: rotate var(--t, 3s) linear infinite;
     background-size: cover;
@@ -111,25 +150,158 @@ li::after {
     offset-distance: 0%;
 }
 .doraemon::after {
-    animation: rotate-doraemon var(--t, 3s) linear infinite;
+    animation: rotate-25 var(--t, 3s) linear infinite;
     background-size: cover;
     background-position: center;
     place-self: center;
     offset-distance: 25%;
 }
 .webiwabo::after {
-    animation: rotate-webiwabo var(--t, 3s) linear infinite;
+    animation: rotate-50 var(--t, 3s) linear infinite;
     background-size: cover;
     background-position: center;
     place-self: center;
     offset-distance: 50%;
 }
 .gustavo::after {
-    animation: rotate-gustavo var(--t, 3s) linear infinite;
+    animation: rotate-75 var(--t, 3s) linear infinite;
     background-size: cover;
     background-position: center;
     place-self: center;
     offset-distance: 75%;
+}
+
+/* Sistema linux */
+.linux {
+    --b: url('../images/sist_linux/linux.png');
+    --d: 30cqi;
+    --w: 30cqi;
+    border: 0;
+}
+.casuario {
+    --b: url('../images/sist_linux/casuario.jpg');
+    --d: 75cqi;
+    --t: 6315.79ms;
+    --w: 10cqi;
+}
+.elmo {
+    --b: url('../images/sist_linux/elmo.jpg');
+    --d: 75cqi;
+    --t: 6315.79ms;
+    --w: 10cqi;
+    --offset-start: 25%;
+}
+.caillou {
+    --b: url('../images/sist_linux/caillou.webp');
+    --d: 75cqi;
+    --t: 6315.79ms;
+    --w: 10cqi;
+    --offset-start: 50%;
+}
+.gustavo-post-lluvia {
+    --b: url('../images/sist_linux/gustavo-post-lluvia.jpg');
+    --d: 75cqi;
+    --t: 6315.79ms;
+    --w: 10cqi;
+    --offset-start: 75%;
+}
+.linux::after {
+    animation: spin 6s linear infinite;
+    background-size: cover;
+    background-position: center;
+    offset-path: none;
+    place-self: center;
+    box-shadow: 0px 0px 33px 0px #FAB12F, 
+                0px 0px 66px 0px #FCF596,
+                0px 0px 99px 0px #FBFBFB;
+}
+.casuario::after {
+    animation: rotate var(--t, 3s) linear infinite;
+    background-size: cover;
+    background-position: center;
+    place-self: center;
+    offset-distance: 0%;
+}
+.elmo::after {
+    animation: rotate-25 var(--t, 3s) linear infinite;
+    background-size: cover;
+    background-position: center;
+    place-self: center;
+    offset-distance: 25%;
+}
+.caillou::after {
+    animation: rotate-50 var(--t, 3s) linear infinite;
+    background-size: cover;
+    background-position: center;
+    place-self: center;
+    offset-distance: 50%;
+}
+.gustavo-post-lluvia::after {
+    animation: rotate-75 var(--t, 3s) linear infinite;
+    background-size: cover;
+    background-position: center;
+    place-self: center;
+    offset-distance: 75%;
+}
+
+/* Sistema Shin Chan */
+.director {
+    --b: url('../images/sist_shinchan/director-shinchan.gif');
+    --d: 30cqi;
+    --w: 30cqi;
+    border: 0;
+}
+.shinchan {
+    --b: url('../images/sist_shinchan/shin-chan-roll.gif');
+    --d: 75cqi;
+    --t: 6315.79ms;
+    --w: 10cqi;
+}
+.masao {
+    --b: url('../images/sist_shinchan/masao.jfif');
+    --d: 75cqi;
+    --t: 6315.79ms;
+    --w: 10cqi;
+    --offset-start: 25%;
+}
+.bochan {
+    --b: url('../images/caillou.webp');
+    --d: 75cqi;
+    --t: 6315.79ms;
+    --w: 10cqi;
+    --offset-start: 50%;
+}
+
+.director::after {
+    animation: spin 6s linear infinite;
+    background-size: cover;
+    background-position: center;
+    offset-path: none;
+    place-self: center;
+    box-shadow: 0px 0px 33px 0px #FAB12F, 
+                0px 0px 66px 0px #FCF596,
+                0px 0px 99px 0px #FBFBFB;
+}
+.shinchan::after {
+    animation: rotate var(--t, 3s) linear infinite;
+    background-size: cover;
+    background-position: center;
+    place-self: center;
+    offset-distance: 0%;
+}
+.masao::after {
+    animation: rotate-25 var(--t, 3s) linear infinite;
+    background-size: cover;
+    background-position: center;
+    place-self: center;
+    offset-distance: 25%;
+}
+.bochan::after {
+    animation: rotate-50 var(--t, 3s) linear infinite;
+    background-size: cover;
+    background-position: center;
+    place-self: center;
+    offset-distance: 50%;
 }
 
 /* Animaciones de los planetas */
@@ -146,17 +318,17 @@ li::after {
         offset-distance: 100%;
     }
 }
-@keyframes rotate-doraemon {
+@keyframes rotate-25 {
     to {
         offset-distance: 125%;
     }
 }
-@keyframes rotate-webiwabo {
+@keyframes rotate-50 {
     to {
         offset-distance: 150%;
     }
 }
-@keyframes rotate-gustavo {
+@keyframes rotate-75 {
     to {
         offset-distance: 175%;
     }
