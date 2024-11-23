@@ -9,8 +9,8 @@
             -webkit-background-clip: text;
         }
         .container {
-            
-            top: -110%;
+            position: sticky;
+            top: -1200px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -21,7 +21,7 @@
             margin: 0;
             width: 100vw;
         }
-        #ol {
+        ol {
             all: unset;
             aspect-ratio: 1 / 1;
             container-type: inline-size;
@@ -32,11 +32,11 @@
             padding-top: 80px;
             z-index: 2;
         }
-        #ol::after {
+        ol::after {
             position: absolute;
             top: 0;
         }
-        #li {
+        li {
             aspect-ratio: 1 / 1;
             border: 1px dashed;
             border-radius: 50%;
@@ -45,7 +45,7 @@
             place-self: center;
             width: var(--d, 2cqi);
         }
-        #li::after {
+        li::after {
             aspect-ratio: 1 / 1;
             background: var(--b, hsl(0, 0%, 50%));
             border-radius: 50%;
@@ -115,27 +115,27 @@
         }
         .pikachu {
             --b: url('images/pikachu.webp');
-            --d: 100cqi;
+            --d: 125cqi;
             --t: 8315.79ms;
             --w: 15cqi;
         }
         .doraemon {
             --b: url('images/doraemon.jpg');
-            --d: 100cqi;
+            --d: 125cqi;
             --t: 8315.79ms;
             --w: 15cqi;
             --offset-start: 25%;
         }
         .webiwabo {
             --b: url('images/webiwabo.webp');
-            --d: 100cqi;
+            --d: 125cqi;
             --t: 8315.79ms;
             --w: 15cqi;
             --offset-start: 50%;
         }
         .gustavo {
             --b: url('images/gustavo.jpg');
-            --d: 100cqi;
+            --d: 125cqi;
             --t: 8315.79ms;
             --w: 15cqi;
             --offset-start: 75%;
@@ -170,75 +170,20 @@
         }
 
         .hoja {
-            background-color: #544e88;
+            background-color: #605EA1;
             border-radius: 10px 10px 50px 50px;
             margin-right: 5%;
             margin-left: 5%;
             margin-bottom: 50px;
             margin-top: 100px;
-            box-shadow: 0 0 50px 30px #20253f,
-                        0 0 50px 30px #605EA1;
+            box-shadow: 0 0 50px 30px #605EA1;
             z-index: 1;
         }
         .parte1 {
+            text-align: center;
             margin: 5%;
             position: relative;
-            font-size: 80px;
-            text-align: center;
-        }
-        .planetas {
-            margin-right: 5%;
-            margin-left: 5%;
-            margin-top: 5%;
-            border-radius: 100px;
-            border: 5px solid;
-            padding-top: 1%;
-            padding-left: 1%;
-            align-content: center;
-            align-items: center;
-            align-self: center;
-        }
-        .parte2 {
-            margin: 7%;
-            background-color: black;
-            -webkit-background-clip: transparent;
-            height: 300px;
-            border-radius: 30px;
-        }
-        .linea {
-            display: flex;
-            justify-content: center;
-            width: fit-content;
-            height: auto;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        .botones {
-            background-color: Transparent;
-            background-repeat:no-repeat;
-            cursor:pointer;
-            overflow: hidden;
-            outline:none;
-            text-align: center;
-            border-radius: 100%;
-        }
-        #sol {
-            border-color: #FAB12F;
-            box-shadow: 0px 0px 33px 0px #FAB12F, 
-                        0px 0px 66px 0px #FCF596,
-                        0px 0px 79px 0px #FBFBFB;
-            width: 150px;
-            height:150px;
-        }
-        @keyframes gradiantSol {
-            
-        }
-        #sol:hover {
-
-        }
-        .textoEsfera {
-            padding-top: 35%;
+            font-size: 200px;
         }
         footer {
             position: sticky;
